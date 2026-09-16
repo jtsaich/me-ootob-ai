@@ -4,9 +4,9 @@ Jack Tsai 的個人空間：小專案、寫作、Coffee Chat。工作室網站�
 
 ## Deploy
 
-Cloudflare Pages 專案 `me-ootob-ai`，自訂網域 `me.ootob.ai`。
+Cloudflare Worker `me-ootob-ai`（static assets，設定在 `wrangler.jsonc`），自訂網域 `me.ootob.ai` 由 wrangler 建立。
 
-- 本機直接上傳：`npx wrangler pages deploy . --project-name me-ootob-ai`
+- 本機直接上傳：`npx wrangler deploy`
 - 或 push `main` 觸發 `.github/workflows/deploy.yml`（需 repo secrets `CLOUDFLARE_API_TOKEN`、`CLOUDFLARE_ACCOUNT_ID`）
 
 ## 結構
