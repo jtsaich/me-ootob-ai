@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jack Tsai — me.ootob.ai</title>
+  <meta name="description" content="Jack Tsai 的個人空間：小專案、寫作、Coffee Chat。什麼都裝一點，沒有固定車道。">
+  <meta property="og:title" content="Jack Tsai — me.ootob.ai">
+  <meta property="og:description" content="Jack Tsai 的小專案與寫作。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://me.ootob.ai">
+  <link rel="canonical" href="https://me.ootob.ai/">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MCWCMS2L');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CGYGTGF0SW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CGYGTGF0SW');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --bg: #fafaf8;
+      --border: #e0ddd8;
+      --max-w: 640px;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.9;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .site-header {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 0;
+    }
+
+    .site-header .logo {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+    }
+
+    .site-origin {
+      margin-top: 0.6rem;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 5rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 0.5rem;
+      text-wrap: balance;
+    }
+
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 15px;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 1.2rem;
+    }
+
+    .project-list {
+      list-style: none;
+    }
+
+    .project-list li {
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-list li:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .project-list a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .project-name {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.2rem;
+      transition: color 0.15s ease;
+    }
+
+    .project-desc {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .project-coming-soon .project-name {
+      color: #aaa;
+      font-weight: 400;
+    }
+
+    .project-coming-soon .project-desc {
+      color: #bbb;
+    }
+
+    .project-tag {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      color: var(--text-secondary);
+      background: rgba(0,0,0,0.04);
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      margin-top: 0.4rem;
+    }
+
+    .section-writing {
+      margin-top: 3rem;
+    }
+
+    .site-footer {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    /* Page load animation */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .site-header { animation: fadeInUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+    main { animation: fadeInUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.08s both; }
+    .site-footer { animation: fadeInUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.16s both; }
+
+    /* Hover only on pointer devices */
+    @media (hover: hover) and (pointer: fine) {
+      .project-list a:hover .project-name {
+        color: var(--text-secondary);
+      }
+    }
+
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      .site-header, main, .site-footer {
+        animation: none;
+      }
+      .project-name {
+        transition: none;
+      }
+    }
+
+    .coffee-chat {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      animation: fadeInUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.12s both;
+    }
+
+    .coffee-chat .coffee-label {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .coffee-chat p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin-bottom: 0.6rem;
+    }
+
+    .coffee-btn {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 0.7rem 1.8rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      border: 1px solid var(--text);
+      border-radius: 4px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .coffee-btn:hover {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    @media (max-width: 480px) {
+      body { font-size: 16px; }
+      h1 { font-size: 1.4rem; }
+      main { padding: 2rem 1.2rem 4rem; }
+      .site-header { padding: 2rem 1.2rem 0; }
+    }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCWCMS2L"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-header" style="display:flex;justify-content:space-between;align-items:baseline;">
+  <span class="logo">me.ootob.ai</span>
+  <span style="display:flex;gap:1.2rem;font-family:'Inter',sans-serif;font-size:13px;color:var(--text-secondary);"><a href="https://ootob.ai/">工作室 ootob.ai →</a></span>
+</header>
+<div class="site-header">
+  <p class="site-origin">歐兜邁 / オートバイ / autobike — 台語的機車，日語的外來語，一台兩輪的東西跑出了三種語言。這個網站也是，什麼都裝一點，沒有固定車道。</p>
+</div>
+
+<main>
+  <h1>小專案</h1>
+  <p class="subtitle">做著玩的東西，有的有用，有的純粹好玩。</p>
+
+  <p class="section-label">Tools</p>
+  <ul class="project-list">
+    <li>
+      <a href="/japanese/quiz.html">
+        <div class="project-name">Dojo 道場</div>
+        <div class="project-desc">日文 N5/N4 每日練習，FSRS 間隔複習 + Markdown 題庫。</div>
+        <span class="project-tag">learning</span>
+      </a>
+    </li>
+    <li class="project-coming-soon">
+      <div class="project-name">Threads to Markdown</div>
+      <div class="project-desc">把 Threads 貼文轉成 Markdown 格式保存。</div>
+      <span class="project-tag">coming soon</span>
+    </li>
+    <li class="project-coming-soon">
+      <div class="project-name">X Thread to Markdown</div>
+      <div class="project-desc">把 X (Twitter) thread 轉成 Markdown 格式保存。</div>
+      <span class="project-tag">coming soon</span>
+    </li>
+  </ul>
+
+  <div class="section-writing">
+    <p class="section-label">For Fun</p>
+    <ul class="project-list">
+      <li>
+        <a href="/try-awesome-design/">
+          <div class="project-name">Design System Experiments</div>
+          <div class="project-desc">同一個網站，二十種設計語言。用 awesome-design-md 把這個站重新穿衣服。</div>
+          <span class="project-tag">20 designs</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section-writing">
+    <p class="section-label">Writing</p>
+    <ul class="project-list">
+      <li>
+        <a href="https://open.substack.com/pub/ootobai/p/about-taste?utm_campaign=ootobai&utm_medium=web" target="_blank" rel="noopener">
+          <div class="project-name">品味不可說</div>
+          <div class="project-desc">品味一旦被定義，就已經不是它了。關於品味、AI、與經驗不可取代的思考。</div>
+        </a>
+      </li>
+      <li>
+        <a href="https://open.substack.com/pub/ootobai/p/mastery?utm_campaign=ootobai&utm_medium=web" target="_blank" rel="noopener">
+          <div class="project-name">當知識變成免費的，Mastery 還剩下什麼？</div>
+          <div class="project-desc">探討AI時代中，當知識取得成本降低後，真正的專業精通還需要親身實踐與判斷力的發展。</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</main>
+
+<section class="coffee-chat">
+  <p class="coffee-label">Coffee Chat</p>
+  <p>如果你想聊聊，不管是品味、AI、創業、或任何你正在想的事，歡迎約一杯咖啡。</p>
+  <p>Let me know how I can help you.</p>
+  <a class="coffee-btn" href="https://calendly.com/jack-ch-tsai/coffee-chat" target="_blank" rel="noopener">預約 Coffee Chat ☕</a>
+</section>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Jack Tsai · <a href="https://ootob.ai/" style="color:inherit;">歐兜拜 ootobai 工作室</a></p>
+</footer>
+
+</body>
+</html>
